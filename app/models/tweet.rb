@@ -9,4 +9,10 @@
 #  username   :string
 #
 class Tweet < ApplicationRecord
+  after_create :send_notifications
+
+  private
+    def send_notifications
+      # TODO: Enviar las notificaciones
+    end
 end

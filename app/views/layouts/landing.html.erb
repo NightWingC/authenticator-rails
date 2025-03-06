@@ -22,11 +22,7 @@
       <li><%= link_to "Inicio", root_path %></li>
       <li><%= link_to "Fotos", photos_path %></li>
     </nav>
-    <% if notice%>
-    <p><%= notice %></p>
-    <%end%>
-    <%= yield :sidebar_options %>
+    <p>Estoy en landing</p>
     <%= yield %>
-
   </body>
 </html>

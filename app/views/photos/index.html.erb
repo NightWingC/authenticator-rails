@@ -1,4 +1,7 @@
 <h1>Photos</h1>
+<%= content_for :sidebar_options do %>
+    <p>Hola desde index/photos</p>
+<% end %>
 <% @photos.each do |photo| %>
     <div>
         <h2><%= photo.title %></h2>
