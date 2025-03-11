@@ -55,6 +55,7 @@ class PhotosController < ApplicationController
   def edit
     # @id = params[:id]
     @photo = Photo.find(params[:id])
+    @tag = Tag.all
   end
 
   def update
@@ -123,6 +124,6 @@ class PhotosController < ApplicationController
     end
 
     def photo_params
-      params.require(:photo).permit(:title, :image_url)
+      params.require(:photo).permit(:title, :image_url, :todo_id, tag_ids: [])
     end
 end

@@ -2,11 +2,18 @@
 <%= content_for :sidebar_options do %>
     <p>Hola desde index/photos</p>
 <% end %>
-<% @photos.each do |photo| %>
-    <div>
-        <h2><%= photo.title %></h2>
-        <%# <%= image_tag photo.image_url %>
-        <img src="<%= photo.image_url %>">
-        <%= link_to "Ver más", photo %>
-    </div>
+
+<%= hero_banner do %>
+    <h1>Hola Index</h1>
 <% end %>
+
+<!-- 
+<% @photos.each do |photo| %>
+    <%= render photo %>
+<% end %>
+--->
+
+<%# 
+<%= render partial: "photos/fotos", collection: @photos, as: :photo %>
+
+<%= render @photos %>

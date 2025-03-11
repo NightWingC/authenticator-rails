@@ -1,14 +1,9 @@
 <p>Intentos <%= session[:intentos]%> </p>
-<%= form_with model: @photo do | form |%>
- 
-    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-    <div>
-        <%= form.label :title %>
-        <%= form.text_field :title %>
-    </div>
-    <div>
-        <%= form.label :image_url %>
-        <%= form.url_field :image_url %>
-    </div>
-    <%= form.submit "Enviar" %>
+<%= render "form", photo: @photo, name: "Pepe" do %>
+
+<h1>Agregar foto</h1>
 <% end %>
+
+<%# Otra forma de usar el parcial  %>
+<%# <%= rende partial: "form", locals: { name: "Pepe" } %> 
+
